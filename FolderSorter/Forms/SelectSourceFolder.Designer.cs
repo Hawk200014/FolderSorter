@@ -1,6 +1,6 @@
 ﻿namespace FolderSorter.Forms
 {
-    partial class SelectFolder
+    partial class SelectSourceFolder
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // SelectSourceFolder
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "SelectSourceFolder";
             this.Text = "SelectFolder";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SelectSourceFolder_FormClosing);
+            this.Load += new System.EventHandler(this.SelectFolder_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

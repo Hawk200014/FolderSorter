@@ -13,7 +13,7 @@ namespace FolderSorter
         public void Log(string error)
         {
             Thread print = new Thread(() => LogErrorAsync(error));
-            print.Start(error);
+            print.Start();
         }
 
         public void LogErrorAsync(string error)
@@ -35,7 +35,7 @@ namespace FolderSorter
             string errorFilePath = GetFilePath();
             if (!File.Exists(errorFilePath))
             {
-                File.Create(errorFolderPath);
+                File.Create(errorFilePath);
                 return true;
             }
             return false;
