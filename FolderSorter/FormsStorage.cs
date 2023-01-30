@@ -10,6 +10,6 @@ namespace FolderSorter
     internal class FormsStorage
     {
         public static Form1 form1;
-        public static SelectSourceFolder selectSourceFolder;
+        public static SorterArgumentForm sorterArgumentForm;
     }
 }

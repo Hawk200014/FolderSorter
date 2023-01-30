@@ -10,21 +10,28 @@ using System.Windows.Forms;
 
 namespace FolderSorter.Forms
 {
-    public partial class SelectSourceFolder : Form
+    public partial class SortKeyDialog : Form
     {
-        public SelectSourceFolder()
+        public SortKeyDialog()
         {
             InitializeComponent();
+            
         }
 
-        private void SelectFolder_Load(object sender, EventArgs e)
+        public Button getSaveButton()
         {
- 
+            return SaveBtn;
         }
 
-        private void SelectSourceFolder_FormClosing(object sender, FormClosingEventArgs e)
+        public Button getCancleButton()
         {
-            FormsStorage.form1.UpdateAndShow();
+            return BackBtn;
         }
+
+        public TextBox GetTextDialog()
+        {
+            return textBox1;
+        }
+
     }
 }
