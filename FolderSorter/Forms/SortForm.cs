@@ -40,11 +40,11 @@ namespace FolderSorter.Forms
         private void SortBtn_Click(object sender, EventArgs e)
         {
             int max = CountFilesToSort();
-            int sortet = 0;
-            progressBar1.Value = 0;
-            progressBar1.Minimum= 0;
-            progressBar1.Maximum= max;
+            int sorted = 0;
             int notSorted = 0;
+            progressBar1.Value = 0;
+            progressBar1.Minimum = 0;
+            progressBar1.Maximum = max;
             CopyFileToDirectory copyFileToDirectory = new CopyFileToDirectory();
             FileManager fm = new FileManager();
             List<SortListArgumentElement> argumentList = Program.sortArgumentsStorage.sortListArguments;
@@ -59,13 +59,18 @@ namespace FolderSorter.Forms
                         {
                             notSorted++;
                         }
-                        progressBar1.Value++;
+                        sorted++;
+                        progressBar1.Value = sorted;
                     }
                 }
             }
             if(notSorted > 0)
             {
                 MessageBox.Show(notSorted + " elements got not sorted");
+            }
+            else
+            {
+                MessageBox.Show(sorted + " elements got sorted");
             }
             progressBar1.Value = 0;
             countLbl.Text = CountFilesToSort() + " elements to sort";

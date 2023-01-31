@@ -79,6 +79,11 @@ namespace FolderSorter.Forms
                 MessageBox.Show("To save that sort argument it need at least 1 sortkey.");
                 return; 
             }
+            if (!InputValid())
+            {
+                MessageBox.Show("Your input is not Valid. Please check if all fields are filled.");
+                return;
+            }
             List<string> list = new List<string>();
             foreach(string item in listBox1.Items)
             {
@@ -90,6 +95,15 @@ namespace FolderSorter.Forms
             FormsStorage.sorterArgumentForm.UpdateList();
             FormsStorage.sorterArgumentForm.Show();
             this.Close();
+        }
+
+        private bool InputValid()
+        {
+            string input = SortNameTextBox.Text;
+            if (string.IsNullOrEmpty(input.Trim())) { return false; }
+            input = destTextBox.Text;
+            if (string.IsNullOrEmpty(input.Trim())) { return false; }
+            return true;
         }
     }
 }

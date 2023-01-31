@@ -6,7 +6,8 @@ namespace FolderSorter
 {
     public partial class Form1 : Form
     {
-        ToolTip sourcePathToolTip;
+        ToolTip sourcePathToolTip = new ToolTip();
+
         public Form1()
         {
             InitializeComponent();
@@ -40,6 +41,7 @@ namespace FolderSorter
             this.Show();
         }
 
+        new
         public void Update()
         {
             FileManager fileManager = new FileManager();
@@ -94,8 +96,19 @@ namespace FolderSorter
 
         private void sortBtn_Click(object sender, EventArgs e)
         {
+            if (!SourceFolderSelected())
+            {
+                MessageBox.Show("Please select a source folder first.");
+            }
             new SortForm().Show();
             FormsStorage.form1.Hide();
+        }
+
+        private bool SourceFolderSelected()
+        {
+            string input = new FileManager().GetSourceFolderPath();
+            if (string.IsNullOrEmpty(input.Trim())) { return false; }
+            return true;
         }
     }
 }

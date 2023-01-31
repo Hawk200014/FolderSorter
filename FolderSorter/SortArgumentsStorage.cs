@@ -11,13 +11,13 @@ namespace FolderSorter
         public List<SortListArgumentElement> sortListArguments;
 
         public SortArgumentsStorage()
-        { 
+        {
+            sortListArguments = new List<SortListArgumentElement>();
             LoadArguments();
         }
 
         private void LoadArguments()
         {
-            sortListArguments= new List<SortListArgumentElement>();
             string destPath = Program.folderManager.GetDestinationDataPath();
             string[] fileNames = Directory.GetFiles(destPath);
             foreach (string fileName in fileNames)

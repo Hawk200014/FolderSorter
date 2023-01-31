@@ -97,6 +97,7 @@
             this.Controls.Add(this.SourcePathLbl);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SortArgumentsListBtn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
