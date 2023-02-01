@@ -21,20 +21,39 @@ namespace FolderSorter.Forms
 
         private int CountFilesToSort()
         {
+            List<string> files = new List<string>();
             CopyFileToDirectory copyFileToDirectory = new CopyFileToDirectory();
             FileManager fm = new FileManager();
             List<SortListArgumentElement> argumentList = Program.sortArgumentsStorage.sortListArguments;
-            int filecount = 0;
             foreach(SortListArgumentElement argument in argumentList)
             {
                 foreach(string key in argument.sortKey)
                 {
-                    filecount += copyFileToDirectory.CountFilesWithName(fm.GetSourceFolderPath(), key);
+                    
+                    string[] allfiles = copyFileToDirectory.GetFilesWithName(fm.GetSourceFolderPath(), key);
+                    foreach (string file in allfiles)
+                    {
+                        if(!CheckIfAllreadyInList(files, file))
+                        {
+                            files.Add(file);
+                        }
+                    }
                 }
             }
-            return filecount;
+            return files.Count;
         }
 
+        private bool CheckIfAllreadyInList(List<string> files, string file)
+        {
+            foreach(string testfile in files)
+            {
+                if(testfile == file)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
 
 
         private void SortBtn_Click(object sender, EventArgs e)

@@ -78,10 +78,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(344, 192);
+            this.ControlBox = false;
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.countLbl);
             this.Controls.Add(this.SortBtn);
             this.Controls.Add(this.progressBar1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SortForm";
             this.Text = "SortForm";
             this.ResumeLayout(false);
