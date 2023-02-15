@@ -5,6 +5,7 @@ namespace FolderSorter
         public static ErrorLogging ErrorLogging= new ErrorLogging();
         public static FolderManager folderManager = new FolderManager();
         public static SortArgumentsStorage sortArgumentsStorage = new SortArgumentsStorage();
+        public static SourceArgumentStorage sourceArgumentStorage = new SourceArgumentStorage();
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>

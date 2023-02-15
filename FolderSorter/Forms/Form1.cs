@@ -70,7 +70,12 @@ namespace FolderSorter
 
         private void SourceFolderBtn_Click(object sender, EventArgs e)
         {
-            OpenSelectSourceForms();
+            //OpenSelectSourceForms();
+            if(FormsStorage.sourceArgumentForm == null)
+            {
+                FormsStorage.sourceArgumentForm = new SourceArgumentForm();
+            }
+            FormsStorage.sourceArgumentForm.Show();
             
         }
 

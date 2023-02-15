@@ -37,10 +37,10 @@
             // 
             // SortArgumentsListBtn
             // 
-            this.SortArgumentsListBtn.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SortArgumentsListBtn.Location = new System.Drawing.Point(300, 151);
+            this.SortArgumentsListBtn.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.SortArgumentsListBtn.Location = new System.Drawing.Point(261, 145);
             this.SortArgumentsListBtn.Name = "SortArgumentsListBtn";
-            this.SortArgumentsListBtn.Size = new System.Drawing.Size(213, 34);
+            this.SortArgumentsListBtn.Size = new System.Drawing.Size(292, 93);
             this.SortArgumentsListBtn.TabIndex = 0;
             this.SortArgumentsListBtn.Text = "Sorter List";
             this.SortArgumentsListBtn.UseVisualStyleBackColor = true;
@@ -61,25 +61,25 @@
             this.SourcePathLbl.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.SourcePathLbl.Location = new System.Drawing.Point(143, 18);
             this.SourcePathLbl.Name = "SourcePathLbl";
-            this.SourcePathLbl.Size = new System.Drawing.Size(464, 25);
+            this.SourcePathLbl.Size = new System.Drawing.Size(645, 25);
             this.SourcePathLbl.TabIndex = 2;
             this.SourcePathLbl.Text = "label2";
             // 
             // SourceFolderBtn
             // 
-            this.SourceFolderBtn.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SourceFolderBtn.Location = new System.Drawing.Point(645, 12);
+            this.SourceFolderBtn.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.SourceFolderBtn.Location = new System.Drawing.Point(261, 46);
             this.SourceFolderBtn.Name = "SourceFolderBtn";
-            this.SourceFolderBtn.Size = new System.Drawing.Size(143, 34);
+            this.SourceFolderBtn.Size = new System.Drawing.Size(292, 93);
             this.SourceFolderBtn.TabIndex = 3;
-            this.SourceFolderBtn.Text = "Source Folder";
+            this.SourceFolderBtn.Text = "Source List";
             this.SourceFolderBtn.UseVisualStyleBackColor = true;
             this.SourceFolderBtn.Click += new System.EventHandler(this.SourceFolderBtn_Click);
             // 
             // sortBtn
             // 
             this.sortBtn.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.sortBtn.Location = new System.Drawing.Point(266, 244);
+            this.sortBtn.Location = new System.Drawing.Point(261, 244);
             this.sortBtn.Name = "sortBtn";
             this.sortBtn.Size = new System.Drawing.Size(292, 93);
             this.sortBtn.TabIndex = 4;
@@ -91,7 +91,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 349);
+            this.ClientSize = new System.Drawing.Size(800, 348);
             this.Controls.Add(this.sortBtn);
             this.Controls.Add(this.SourceFolderBtn);
             this.Controls.Add(this.SourcePathLbl);

@@ -11,5 +11,6 @@ namespace FolderSorter
     {
         public static Form1 form1;
         public static SorterArgumentForm sorterArgumentForm;
+        public static SourceArgumentForm sourceArgumentForm;
     }
 }
